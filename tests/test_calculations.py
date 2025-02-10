@@ -1,5 +1,5 @@
 '''My Calculator Test'''
-from calculator.operation import add, subtract, multiply, divide
+from calculator.operations import add, subtract, multiply, divide
 
 def test_addition():
     '''Test that addition function works '''    
