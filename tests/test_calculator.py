@@ -16,4 +16,3 @@ def test_multiplication():
 def test_division():
     '''Test that division fuction works'''
     assert divide(2,2) == 1
-    
