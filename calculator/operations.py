@@ -1,20 +1,11 @@
-class Operation:
-    """Base class for operations, utilizing polymorphism for extendability."""
-    @staticmethod
-    def add(a, b):
+     def add(a,b):
         return a + b
     
-    @staticmethod
-    def subtract(a, b):
+    def subtract(a,b):
         return a - b
     
-    @staticmethod
-    def multiply(a, b):
+    def multiply(a,b):
         return a * b
     
-    @staticmethod
-    def divide(a, b):
-        if b != 0:
-            return a / b
-        else:
-            return "Error: Division by zero"
+    def divide(a,b):
+         return a / b
