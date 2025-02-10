@@ -7,9 +7,8 @@ def subtract(a, b):
     return a - b
 
 def multiply(a, b):
-    '''Test that multiply fuction works '''
+    '''Test '''
     return a * b
 
 def divide(a, b):
-    '''Test that division fuction works '''
     return a / b
