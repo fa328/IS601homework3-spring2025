@@ -1,35 +1,50 @@
-'''Calculations functions'''
+'''My Calculator Test'''
 from calculator.calculation import Calculations
 from calculator.operations import add, subtract, multiply, divide
 
 class Calculator:
     '''Calculations functions'''
+
     @staticmethod
-    def add(a,b):
+    def add(a: float, b: float) -> str:
         '''Test that addition function works '''    
-        calculation = Calculations(a, b, add) # add function
-        return calculation.get_result()
-    @staticmethod
-    def subtract(a,b):
-        '''Test that subtract function works '''    
-        calculation = Calculations(a, b, subtract) # subtract function
-        return calculation.get_result()
-    @staticmethod
-    def multiply (a,b):
-        '''Test that multiply function works '''    
-        calculation = Calculations(a, b, multiply) # multiply fuction
-        return calculation.get_result()
-    @staticmethod
-    def divide (a,b):
-        '''Test that addition function works '''    
-        calculation = Calculations(a, b, divide) # divide fuction
+        calculation = Calculations(a, b, add)
         return calculation.get_result()
 
-@classmethod
-    def basic_operations(cls, a, b):
-        '''Performs all basic operations (addition, subtraction, multiplication, division) and returns the results as a dictionary'''
-        return {
-            'addition': cls.add(a, b),
-            'subtraction': cls.subtract(a, b),
-            'multiplication': cls.multiply(a, b),
-            'division': cls.divide(a, b)
+    @staticmethod
+    def subtract(a: float, b: float) -> str:
+        '''Test that subtract function works '''    
+        calculation = Calculations(a, b, subtract)
+        return calculation.get_result()
+
+    @staticmethod
+    def multiply(a: float, b: float) -> str:
+        '''Test that multiply function works '''    
+        calculation = Calculations(a, b, multiply)
+        return calculation.get_result()
+
+    @staticmethod
+    def divide(a: float, b: float) -> str:
+        '''Test that divide function works '''    
+        if b == 0:
+            return "Error: Division by zero"
+        return Calculations(a, b, divide).get_result()
+
+class CalculationsHistory:
+    '''To store history'''
+    history = []
+
+    @classmethod
+    def add_history(cls, calculation):
+        '''Performs addition, subtraction, multiplication, division'''
+        cls.history.append(calculation)
+
+    @classmethod
+    def get_history(cls):
+        '''To get the history of calculations'''
+        return cls.history
+
+    @classmethod
+    def clear_history(cls):
+        '''Use to clears the history'''
+        cls.history = []
