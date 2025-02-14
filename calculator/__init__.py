@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+"""My level 3 Calcu"""
+
+def add(a, b):
+    """Test that addition function works."""
+    return a + b
+
+def subtract(a, b):
+    """Test that subtraction function works"""
+    return a - b
+
+def multiply(a, b):
+    """Test that multiply fuction works"""
+    return a * b
+
+def divide(a, b):
+    """Test that divide fuction works"""
+    return a / b
+=======
 '''My Calculator Test'''
 import pytest # type: ignore
 from calculator.calculation import Calculations
@@ -49,8 +68,12 @@ class CalculationsHistory:
     def clear_history(cls):
         '''Use to clears the history'''
         cls.history = []
+<<<<<<< HEAD
 
 calc = Calculator()
 result = calc.add(2, 2)
 CalculationsHistory.add_history(result)
 print(CalculationsHistory.get_history())
+=======
+>>>>>>> part3
+>>>>>>> Main
